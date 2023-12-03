@@ -1,9 +1,9 @@
 <template>
   <div class="homeProject">
-    <SeekerProject />
+    <SeekerProject @search="onSearch" />
     <div class="homeProject__cards" @click="closeCard">
       <CardCountry
-        v-for="country in countries"
+        v-for="country in filteredCountries"
         :key="country.code"
         :countryData="country"
         :openCard="openCard"
@@ -28,7 +28,15 @@ export default {
     return {
       countries: [],
       openedCard: null,
+      searchTerm: '',
     };
+  },
+  computed: {
+    filteredCountries() {
+      return this.countries.filter(country =>
+        country.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    },
   },
   methods: {
     openCard(code) {
@@ -36,6 +44,9 @@ export default {
     },
     closeCard() {
       this.openedCard = null;
+    },
+    onSearch(searchTerm) {
+      this.searchTerm = searchTerm;
     },
   },
   async created() {

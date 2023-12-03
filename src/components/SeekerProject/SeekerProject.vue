@@ -1,6 +1,11 @@
 <template>
   <div class="seekerProject">
-    <input class="seekerProject__input" type="text" placeholder="Country" />
+    <input
+      class="seekerProject__input"
+      type="text"
+      placeholder="País"
+      v-model="searchTerm"
+      @input="onInput" />
     <div class="seekerProject__search">
       <button class="seekerProject__search-button">
         <img
@@ -16,6 +21,16 @@
 <script>
 export default {
   name: 'SeekerProject',
+  data() {
+    return {
+      searchTerm: '',
+    };
+  },
+  methods: {
+    onInput() {
+      this.$emit('search', this.searchTerm);
+    },
+  },
 };
 </script>
 
