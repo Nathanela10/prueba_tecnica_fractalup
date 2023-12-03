@@ -9,9 +9,16 @@
 .cardCountry__image {
   height: 60%;
   width: 100%;
-  background-color: blueviolet;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
+}
+
+.cardCountry__image img {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  object-fit: cover;
 }
 
 .cardCountry__content {

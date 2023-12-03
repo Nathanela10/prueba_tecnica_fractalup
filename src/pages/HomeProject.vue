@@ -25,14 +25,13 @@ export default {
   data() {
     return {
       countries: [],
-      countryImage: '',
     };
   },
   async created() {
     const countries = await getCountries();
     for (let i = 0; i < countries.length; i++) {
       const country = { ...countries[i] };
-      country.imageUrl = await getCountryImage(country.name);
+      country.imageUrl = await getCountryImage(country.capital, country.name);
       this.countries.push(country);
     }
   },
