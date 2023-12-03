@@ -1,16 +1,21 @@
 <template>
   <div class="homeProject">
     <SeekerProject />
+    <div>
+      <CardCountryVue />
+    </div>
   </div>
 </template>
 
 <script>
-import SeekerProject from '../components/SeekerProject/SeekerProject.vue';
+import CardCountryVue from '@/components/CardCountry/CardCountry.vue';
+import SeekerProject from '@/components/SeekerProject/SeekerProject.vue';
 
 export default {
   name: 'HomeProject',
   components: {
     SeekerProject,
+    CardCountryVue,
   },
 };
 </script>
@@ -21,6 +26,8 @@ export default {
   color: #676767;
   padding: 20px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 </style>
