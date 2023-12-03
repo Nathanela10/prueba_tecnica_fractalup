@@ -1,14 +1,20 @@
 <template>
   <div>
-    <div class="cardCountry" @click.stop="openCard(countryData.code)">
+    <div
+      class="cardCountry"
+      @click.stop="openCard(countryData.code)"
+      :class="{ 'cardCountry--active': openedCard === countryData.code }">
       <div class="cardCountry__image">
-        <img :src="countryData.imageUrl" :alt="'Imagen de' + countryData.name" />
+        <img
+          :src="countryData.imageUrl"
+          :alt="'Imagen de' + countryData.name" />
       </div>
       <div class="cardCountry__content">
         <div class="cardCountry__content-emoji">
           <p>{{ countryData.emoji }}</p>
         </div>
-        <div class="cardCountry__content-text">
+        <div class="cardCountry__content-text"
+        :class="{ 'cardCountry__content-text--active': openedCard === countryData.code }">
           <h3>{{ countryData.name }}</h3>
           <p>{{ countryData.continent.name }}</p>
         </div>

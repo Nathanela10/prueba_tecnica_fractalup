@@ -9,6 +9,10 @@
   cursor: pointer;
 }
 
+.cardCountry--active {
+  background-color: #10a2ff;
+}
+
 .cardCountry__image {
   height: 60%;
   width: 100%;
@@ -57,10 +61,18 @@
   color: #10a2ff;
 }
 
+.cardCountry__content-text--active h3 {
+  color: #fff;
+}
+
 .cardCountry__content-text p {
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.5px;
   color: #676767;
   margin: -15px 0 0 0;
+}
+
+.cardCountry__content-text--active p {
+  color: #fff;
 }
