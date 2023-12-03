@@ -32,6 +32,7 @@
   font-weight: 600;
   border: none;
   padding: 0 20px;
+  text-decoration: none;
 }
 
 .sidebarProject__buttons-button:hover {
@@ -39,4 +40,11 @@
   color: #676767;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.active-link {
+  background-color: #dbdbdb;
+  color: #676767;
+  border-radius: 8px;
+  cursor: none;
 }

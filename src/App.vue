@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <SidebarProject />
+    <router-view />
   </div>
 </template>
 
@@ -26,5 +27,6 @@ body {
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  display: flex;
 }
 </style>
