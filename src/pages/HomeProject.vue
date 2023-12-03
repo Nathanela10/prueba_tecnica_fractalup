@@ -14,6 +14,7 @@
 import CardCountry from '@/components/CardCountry/CardCountry.vue';
 import SeekerProject from '@/components/SeekerProject/SeekerProject.vue';
 import { getCountries } from '@/services/CountriesApi.js';
+import { getCountryImage } from '@/services/ImageCountryApi.js';
 
 export default {
   name: 'HomeProject',
@@ -24,11 +25,16 @@ export default {
   data() {
     return {
       countries: [],
+      countryImage: '',
     };
   },
   async created() {
-    this.countries = await getCountries();
-    console.log(this.countries);
+    const countries = await getCountries();
+    for (let i = 0; i < countries.length; i++) {
+      const country = { ...countries[i] };
+      country.imageUrl = await getCountryImage(country.name);
+      this.countries.push(country);
+    }
   },
 };
 </script>

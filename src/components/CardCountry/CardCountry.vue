@@ -1,7 +1,7 @@
 <template>
   <div class="cardCountry">
     <div class="cardCountry__image">
-      <img src="" alt="" />
+      <img :src="countryData.imageUrl" alt="" />
     </div>
     <div class="cardCountry__content">
       <div class="cardCountry__content-emoji">
