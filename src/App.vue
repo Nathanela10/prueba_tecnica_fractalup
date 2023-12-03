@@ -23,6 +23,7 @@ body {
   background-color: #e3f4ff;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 #app {

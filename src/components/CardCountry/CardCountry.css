@@ -23,14 +23,21 @@
   gap: 20px;
 }
 
-.cardCountry__content-image {
-  height: 50px;
-  width: 75px;
-  background-color: burlywood;
+.cardCountry__content-emoji {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardCountry__content-emoji p {
+  font-size: 80px;
 }
 
 .cardCountry__content-text {
-  line-height: 8px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .cardCountry__content-text h3 {
@@ -45,4 +52,5 @@
   font-weight: 400;
   letter-spacing: 0.5px;
   color: #676767;
+  margin: -15px 0 0 0;
 }

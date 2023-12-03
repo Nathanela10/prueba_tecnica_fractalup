@@ -4,12 +4,12 @@
       <img src="" alt="" />
     </div>
     <div class="cardCountry__content">
-      <div class="cardCountry__content-image">
-        <img src="" alt="" />
+      <div class="cardCountry__content-emoji">
+        <p>{{ countryData.emoji }}</p>
       </div>
       <div class="cardCountry__content-text">
-        <h3>Country</h3>
-        <p>Continent</p>
+        <h3>{{ countryData.name }}</h3>
+        <p>{{ countryData.continent.name }}</p>
       </div>
     </div>
   </div>
@@ -18,6 +18,12 @@
 <script>
 export default {
   name: 'CardCountry',
+  props: {
+    countryData: {
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>
 
