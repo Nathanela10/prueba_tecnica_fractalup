@@ -4,6 +4,9 @@
   background-color: #fff;
   border-radius: 40px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .cardCountry__image {

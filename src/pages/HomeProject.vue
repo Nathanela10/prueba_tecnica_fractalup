@@ -1,11 +1,13 @@
 <template>
   <div class="homeProject">
     <SeekerProject />
-    <div class="homeProject__cards">
+    <div class="homeProject__cards" @click="closeCard">
       <CardCountry
         v-for="country in countries"
         :key="country.code"
-        :countryData="country" />
+        :countryData="country"
+        :openCard="openCard"
+        :openedCard="openedCard" />
     </div>
   </div>
 </template>
@@ -25,7 +27,16 @@ export default {
   data() {
     return {
       countries: [],
+      openedCard: null,
     };
+  },
+  methods: {
+    openCard(code) {
+      this.openedCard = code;
+    },
+    closeCard() {
+      this.openedCard = null;
+    },
   },
   async created() {
     const countries = await getCountries();
