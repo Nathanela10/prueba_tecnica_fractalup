@@ -7,12 +7,12 @@
 <script>
 export default {
   name: 'ViewOne',
-}
+};
 </script>
 
 <style scoped>
 .viewOne {
   color: #676767;
-  padding: 30px 50px;
+  padding: 10px 0 0 50px;
 }
 </style>

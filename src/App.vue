@@ -12,8 +12,8 @@ export default {
   name: 'App',
   components: {
     SidebarProject,
-  }
-}
+  },
+};
 </script>
 
 <style>
@@ -21,7 +21,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: #e3f4ff;
-  margin: -1vh 0 0 0;
+  margin: 0;
   padding: 0;
 }
 
