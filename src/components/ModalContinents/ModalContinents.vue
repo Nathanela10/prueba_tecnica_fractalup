@@ -9,7 +9,7 @@
         <div class="modalContinent__content-options">
           <div class="modalContinent__content-options-image">
             <img
-              src="@/assets/europe.svg"
+              src="@/assets/europe.png"
               @click="selectContinent('Europe')"
               :class="{
                 'blue-shadow': isSelected('Europe'),
@@ -18,35 +18,35 @@
           </div>
           <div>
             <img
-              src="@/assets/america.svg"
+              src="@/assets/america.png"
               @click="selectContinent(['North America', 'South America'])"
               :class="{ 'blue-shadow': isSelected('America') }" />
             <p>America</p>
           </div>
           <div>
             <img
-              src="@/assets/asia.svg"
+              src="@/assets/asia.png"
               @click="selectContinent('Asia')"
               :class="{ 'blue-shadow': isSelected('Asia') }" />
             <p>Asia</p>
           </div>
           <div>
             <img
-              src="@/assets/oceania.svg"
+              src="@/assets/oceania.png"
               @click="selectContinent('Oceania')"
               :class="{ 'blue-shadow': isSelected('Oceania') }" />
             <p>Oceania</p>
           </div>
           <div>
             <img
-              src="@/assets/africa.svg"
+              src="@/assets/africa.png"
               @click="selectContinent('Africa')"
               :class="{ 'blue-shadow': isSelected('Africa') }" />
             <p>Africa</p>
           </div>
           <div>
             <img
-              src="@/assets/antarctica.svg"
+              src="@/assets/antarctica.png"
               @click="selectContinent('Antarctica')"
               :class="{ 'blue-shadow': isSelected('Antarctica') }" />
             <p>Antarctica</p>
