@@ -1,54 +1,56 @@
 <template>
-  <div class="modalContinent" v-if="isOpen">
-    <div class="modalContinent__header">
-      <h3>Filtrar por continentes</h3>
-      <button @click="clearSelection">Limpiar</button>
-    </div>
-    <div class="modalContinent__content">
-      <div class="modalContinent__content-options">
-        <div class="modalContinent__content-options-image">
-          <img
-            src="@/assets/europe.svg"
-            @click="selectContinent('Europe')"
-            :class="{
-              'blue-shadow': isSelected('Europe'),
-            }" />
-          <p>Europa</p>
-        </div>
-        <div>
-          <img
-            src="@/assets/america.svg"
-            @click="selectContinent(['North America', 'South America'])"
-            :class="{ 'blue-shadow': isSelected('America') }" />
-          <p>America</p>
-        </div>
-        <div>
-          <img
-            src="@/assets/asia.svg"
-            @click="selectContinent('Asia')"
-            :class="{ 'blue-shadow': isSelected('Asia') }" />
-          <p>Asia</p>
-        </div>
-        <div>
-          <img
-            src="@/assets/oceania.svg"
-            @click="selectContinent('Oceania')"
-            :class="{ 'blue-shadow': isSelected('Oceania') }" />
-          <p>Oceania</p>
-        </div>
-        <div>
-          <img
-            src="@/assets/africa.svg"
-            @click="selectContinent('Africa')"
-            :class="{ 'blue-shadow': isSelected('Africa') }" />
-          <p>Africa</p>
-        </div>
-        <div>
-          <img
-            src="@/assets/antarctica.svg"
-            @click="selectContinent('Antarctica')"
-            :class="{ 'blue-shadow': isSelected('Antarctica') }" />
-          <p>Antarctica</p>
+  <div class="modalWrapper" v-if="isOpen" @click="closeModal">
+    <div class="modalContinent" @click.stop>
+      <div class="modalContinent__header">
+        <h3>Filtrar por continentes</h3>
+        <button @click="clearSelection">Limpiar</button>
+      </div>
+      <div class="modalContinent__content">
+        <div class="modalContinent__content-options">
+          <div class="modalContinent__content-options-image">
+            <img
+              src="@/assets/europe.svg"
+              @click="selectContinent('Europe')"
+              :class="{
+                'blue-shadow': isSelected('Europe'),
+              }" />
+            <p>Europa</p>
+          </div>
+          <div>
+            <img
+              src="@/assets/america.svg"
+              @click="selectContinent(['North America', 'South America'])"
+              :class="{ 'blue-shadow': isSelected('America') }" />
+            <p>America</p>
+          </div>
+          <div>
+            <img
+              src="@/assets/asia.svg"
+              @click="selectContinent('Asia')"
+              :class="{ 'blue-shadow': isSelected('Asia') }" />
+            <p>Asia</p>
+          </div>
+          <div>
+            <img
+              src="@/assets/oceania.svg"
+              @click="selectContinent('Oceania')"
+              :class="{ 'blue-shadow': isSelected('Oceania') }" />
+            <p>Oceania</p>
+          </div>
+          <div>
+            <img
+              src="@/assets/africa.svg"
+              @click="selectContinent('Africa')"
+              :class="{ 'blue-shadow': isSelected('Africa') }" />
+            <p>Africa</p>
+          </div>
+          <div>
+            <img
+              src="@/assets/antarctica.svg"
+              @click="selectContinent('Antarctica')"
+              :class="{ 'blue-shadow': isSelected('Antarctica') }" />
+            <p>Antarctica</p>
+          </div>
         </div>
       </div>
     </div>
@@ -89,7 +91,6 @@ export default {
         }
       }
       this.$emit('continentSelected', this.selectedContinents);
-      this.closeModal();
     },
     isSelected(continent) {
       if (continent === 'America') {

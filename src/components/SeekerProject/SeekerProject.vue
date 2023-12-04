@@ -6,6 +6,7 @@
       placeholder="País"
       v-model="searchTerm"
       @input="onInput"
+      @click="emitClick"
       />
     <div class="seekerProject__search">
       <button class="seekerProject__search-button">
@@ -30,6 +31,9 @@ export default {
   methods: {
     onInput() {
       this.$emit('search', this.searchTerm);
+    },
+    emitClick() {
+      this.$emit('seekerClicked');
     },
   },
 };

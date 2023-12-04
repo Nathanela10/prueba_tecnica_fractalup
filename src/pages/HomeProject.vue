@@ -1,6 +1,6 @@
 <template>
-  <div class="homeProject" @click="openModal">
-    <SeekerProject @search="onSearch" @clicked="openModal" />
+  <div class="homeProject">
+    <SeekerProject @search="onSearch"  @seekerClicked="openModal"  />
     <ModalContinents @continentSelected="onContinentSelected" ref="modal" />
     <div class="homeProject__cards" @click="closeCard">
       <CardCountry
@@ -60,28 +60,6 @@ export default {
     openModal() {
       this.$refs.modal.openModal();
     },
-    closeModal() {
-      this.$emit('close');
-    },
-    // onContinentSelected(continent) {
-    //   if (Array.isArray(continent)) {
-    //     continent.forEach(c => {
-    //       const index = this.selectedContinent.indexOf(c);
-    //       if (index > -1) {
-    //         this.selectedContinent.splice(index, 1);
-    //       } else {
-    //         this.selectedContinent.push(c);
-    //       }
-    //     });
-    //   } else {
-    //     const index = this.selectedContinent.indexOf(continent);
-    //     if (index > -1) {
-    //       this.selectedContinent.splice(index, 1);
-    //     } else {
-    //       this.selectedContinent.push(continent);
-    //     }
-    //   }
-    // },
     onContinentSelected(continent) {
       if (Array.isArray(continent)) {
         if (continent.length === 0) {
