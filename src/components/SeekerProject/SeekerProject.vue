@@ -6,8 +6,7 @@
       placeholder="País"
       v-model="searchTerm"
       @input="onInput"
-      @click="emitClick"
-      />
+      @click="emitClick" />
     <div class="seekerProject__search">
       <button class="seekerProject__search-button">
         <img

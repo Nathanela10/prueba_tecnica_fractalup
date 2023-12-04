@@ -1,6 +1,6 @@
 <template>
   <div class="homeProject">
-    <SeekerProject @search="onSearch"  @seekerClicked="openModal"  />
+    <SeekerProject @search="onSearch" @seekerClicked="openModal" />
     <ModalContinents @continentSelected="onContinentSelected" ref="modal" />
     <div class="homeProject__cards" @click="closeCard">
       <CardCountry

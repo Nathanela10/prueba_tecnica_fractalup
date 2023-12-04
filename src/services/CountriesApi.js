@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client/core';
 
 const client = new ApolloClient({
-  uri: 'https://countries.trevorblades.com',
+  uri: process.env.VUE_APP_COUNTRIES_API,
   cache: new InMemoryCache(),
 });
 
@@ -30,9 +30,14 @@ const GET_COUNTRIES = gql`
 `;
 
 export async function getCountries() {
-  const response = await client.query({
-    query: GET_COUNTRIES,
-  });
+  try {
+    const response = await client.query({
+      query: GET_COUNTRIES,
+    });
 
-  return response.data.countries;
+    return response.data.countries;
+  } catch (error) {
+    console.error('Error al obtener los países:', error);
+    throw error;
+  }
 }
