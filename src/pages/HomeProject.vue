@@ -1,6 +1,7 @@
 <template>
-  <div class="homeProject">
-    <SeekerProject @search="onSearch" />
+  <div class="homeProject" @click="openModal">
+    <SeekerProject @search="onSearch" @clicked="openModal" />
+    <ModalContinents @continentSelected="onContinentSelected" ref="modal" />
     <div class="homeProject__cards" @click="closeCard">
       <CardCountry
         v-for="country in filteredCountries"
@@ -17,25 +18,33 @@ import CardCountry from '@/components/CardCountry/CardCountry.vue';
 import SeekerProject from '@/components/SeekerProject/SeekerProject.vue';
 import { getCountries } from '@/services/CountriesApi.js';
 import { getCountryImage } from '@/services/ImageCountryApi.js';
+import ModalContinents from '@/components/ModalContinents/ModalContinents.vue';
 
 export default {
   name: 'HomeProject',
   components: {
     SeekerProject,
     CardCountry,
+    ModalContinents,
   },
   data() {
     return {
       countries: [],
       openedCard: null,
       searchTerm: '',
+      selectedContinent: [],
     };
   },
   computed: {
     filteredCountries() {
-      return this.countries.filter(country =>
-        country.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      const filtered = this.countries.filter(
+        country =>
+          country.name.toLowerCase().includes(this.searchTerm.toLowerCase()) &&
+          (this.selectedContinent.length === 0 ||
+            this.selectedContinent.includes(country.continent.name))
       );
+      // console.log(filtered);
+      return filtered;
     },
   },
   methods: {
@@ -47,6 +56,40 @@ export default {
     },
     onSearch(searchTerm) {
       this.searchTerm = searchTerm;
+    },
+    openModal() {
+      this.$refs.modal.openModal();
+    },
+    closeModal() {
+      this.$emit('close');
+    },
+    // onContinentSelected(continent) {
+    //   if (Array.isArray(continent)) {
+    //     continent.forEach(c => {
+    //       const index = this.selectedContinent.indexOf(c);
+    //       if (index > -1) {
+    //         this.selectedContinent.splice(index, 1);
+    //       } else {
+    //         this.selectedContinent.push(c);
+    //       }
+    //     });
+    //   } else {
+    //     const index = this.selectedContinent.indexOf(continent);
+    //     if (index > -1) {
+    //       this.selectedContinent.splice(index, 1);
+    //     } else {
+    //       this.selectedContinent.push(continent);
+    //     }
+    //   }
+    // },
+    onContinentSelected(continent) {
+      if (Array.isArray(continent)) {
+        if (continent.length === 0) {
+          this.selectedContinent = [];
+        } else {
+          this.selectedContinent = continent;
+        }
+      }
     },
   },
   async created() {

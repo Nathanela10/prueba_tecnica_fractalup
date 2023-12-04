@@ -12,7 +12,14 @@
       </div>
       <div class="drawerCard__content-title">
         <h3>{{ countryData.name }}</h3>
-        <p>{{ countryData.continent.name }}</p>
+        <p>
+          {{
+            countryData.continent.name === 'North America' ||
+            countryData.continent.name === 'South America'
+              ? 'America'
+              : countryData.continent.name
+          }}
+        </p>
       </div>
     </div>
     <div>
@@ -68,7 +75,7 @@ export default {
       if (!this.$refs.closeButton.contains(event.target)) {
         event.stopPropagation();
       }
-    }
+    },
   },
 };
 </script>

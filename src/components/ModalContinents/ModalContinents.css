@@ -1,0 +1,43 @@
+.modalContinent {
+  height: auto;
+  width: 26vw;
+  background-color: #fff;
+  top: 90px;
+  position: fixed;
+  z-index: 3;
+  padding: 0 30px;
+  border-radius: 40px;
+}
+
+.modalContinent__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modalContinent__header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #858585;
+}
+
+.modalContinent__header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #10a2ff;
+  font-size: 18px;
+}
+
+.modalContinent__content-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.modalContinent__content-options img {
+  height: 100px;
+}
+
+.blue-shadow {
+  box-shadow: 0 0 20px rgba(15, 163, 255, 0.5);
+}

@@ -13,10 +13,21 @@
         <div class="cardCountry__content-emoji">
           <p>{{ countryData.emoji }}</p>
         </div>
-        <div class="cardCountry__content-text"
-        :class="{ 'cardCountry__content-text--active': openedCard === countryData.code }">
+        <div
+          class="cardCountry__content-text"
+          :class="{
+            'cardCountry__content-text--active':
+              openedCard === countryData.code,
+          }">
           <h3>{{ countryData.name }}</h3>
-          <p>{{ countryData.continent.name }}</p>
+          <p>
+            {{
+              countryData.continent.name === 'North America' ||
+              countryData.continent.name === 'South America'
+                ? 'America'
+                : countryData.continent.name
+            }}
+          </p>
         </div>
       </div>
     </div>

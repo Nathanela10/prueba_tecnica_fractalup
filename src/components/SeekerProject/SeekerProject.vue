@@ -5,7 +5,8 @@
       type="text"
       placeholder="País"
       v-model="searchTerm"
-      @input="onInput" />
+      @input="onInput"
+      />
     <div class="seekerProject__search">
       <button class="seekerProject__search-button">
         <img
