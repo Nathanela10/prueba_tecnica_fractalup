@@ -32,7 +32,7 @@ encontrará el archivo `.env` necesario en la raiz del proyecto.
 
 Siga estos pasos para ejecutar el proyecto localmente:
 
-1. Clonar este repositorio: `git clone https://tu-repositorio.git`
+1. Clonar este repositorio: `git clone https://github.com/Nathanela10/prueba_tecnica_fractalup.git`
 2. Navegar al directorio del proyecto: `cd prueba_tecnica`
 3. Instalar dependencias: `npm install`
 4. Ejecutar en modo de desarrollo: `npm run serve`
