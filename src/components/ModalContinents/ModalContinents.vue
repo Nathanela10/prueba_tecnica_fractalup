@@ -16,35 +16,35 @@
               }" />
             <p>Europa</p>
           </div>
-          <div>
+          <div class="modalContinent__content-options-image">
             <img
               src="@/assets/america.png"
               @click="selectContinent(['North America', 'South America'])"
               :class="{ 'blue-shadow': isSelected('America') }" />
             <p>America</p>
           </div>
-          <div>
+          <div class="modalContinent__content-options-image">
             <img
               src="@/assets/asia.png"
               @click="selectContinent('Asia')"
               :class="{ 'blue-shadow': isSelected('Asia') }" />
             <p>Asia</p>
           </div>
-          <div>
+          <div class="modalContinent__content-options-image">
             <img
               src="@/assets/oceania.png"
               @click="selectContinent('Oceania')"
               :class="{ 'blue-shadow': isSelected('Oceania') }" />
             <p>Oceania</p>
           </div>
-          <div>
+          <div class="modalContinent__content-options-image">
             <img
               src="@/assets/africa.png"
               @click="selectContinent('Africa')"
               :class="{ 'blue-shadow': isSelected('Africa') }" />
             <p>Africa</p>
           </div>
-          <div>
+          <div class="modalContinent__content-options-image">
             <img
               src="@/assets/antarctica.png"
               @click="selectContinent('Antarctica')"
