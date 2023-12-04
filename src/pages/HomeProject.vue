@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import CardCountry from '@/components/CardCountry/CardCountry.vue';
-import SeekerProject from '@/components/SeekerProject/SeekerProject.vue';
 import { getCountries } from '@/services/CountriesApi.js';
 import { getCountryImage } from '@/services/ImageCountryApi.js';
+import CardCountry from '@/components/CardCountry/CardCountry.vue';
+import SeekerProject from '@/components/SeekerProject/SeekerProject.vue';
 import ModalContinents from '@/components/ModalContinents/ModalContinents.vue';
 
 export default {
@@ -43,7 +43,6 @@ export default {
           (this.selectedContinent.length === 0 ||
             this.selectedContinent.includes(country.continent.name))
       );
-      // console.log(filtered);
       return filtered;
     },
   },
