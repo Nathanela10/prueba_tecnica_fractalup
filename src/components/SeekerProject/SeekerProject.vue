@@ -13,7 +13,7 @@
           class="seekerProject__search-button-loupe"
           src="@/assets/loupe.svg"
           alt="Lupa" />
-        Buscar
+        <h3>Buscar</h3>
       </button>
     </div>
   </div>

@@ -44,3 +44,17 @@
   height: 25px;
   width: auto;
 }
+
+@media (max-width: 480px) {
+  .seekerProject {
+    width: 50vw;
+  }
+
+  .seekerProject__search-button {
+    width: 50px;
+  }
+
+  .seekerProject__search-button h3 {
+    display: none;
+  }
+}
