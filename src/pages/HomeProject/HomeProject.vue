@@ -80,24 +80,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.homeProject {
-  width: 83%;
-  color: #676767;
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.homeProject__cards {
-  height: 92vh;
-  width: 100%;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  padding: 50px 0;
-  gap: 20px;
-  overflow-y: scroll;
-}
-</style>
+<style scoped src="./HomeProject.css"></style>

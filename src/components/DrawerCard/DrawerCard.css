@@ -40,6 +40,7 @@
 .drawerCard__content {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  padding: 0 0 0 40px;
 }
 
 .drawerCard__content-emoji {
@@ -124,4 +125,152 @@
   letter-spacing: 0.5px;
   color: #858585;
   margin: -10px 0 0 0;
+}
+
+@media (min-width: 721px) and (max-width: 1024px) {
+  .drawerCard {
+    height: 85vh;
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .drawerCard__button {
+    width: 32px;
+  }
+
+  .drawerCard__content {
+    padding: 0 40px;
+    margin: -20px 0 0 0;
+    gap: 10px;
+  }
+
+  .drawerCard__content-emoji p {
+    font-size: 100px;
+    margin: -30px 0 0 0;
+  }
+
+  .drawerCard__content-title h3 {
+    font-size: 20px;
+  }
+
+  .drawerCard__content-title p {
+    font-size: 18px;
+  }
+
+  .drawerCard__text h3 {
+    font-size: 22px;
+  }
+
+  .drawerCard__text p {
+    font-size: 18px;
+  }
+
+  .drawerCard__text-states h3 {
+    font-size: 22px;
+  }
+
+  .drawerCard__text-states-ul {
+    height: 20vh;
+  }
+}
+
+
+@media (min-width: 481px) and (max-width: 720px) {
+  .drawerCard {
+    height: 85vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .drawerCard__button {
+    width: 32px;
+  }
+
+  .drawerCard__content {
+    padding: 0 40px;
+    margin: -20px 0 0 0;
+    gap: 10px;
+  }
+
+  .drawerCard__content-emoji p {
+    font-size: 100px;
+    margin: -30px 0 0 0;
+  }
+
+  .drawerCard__content-title h3 {
+    font-size: 20px;
+  }
+
+  .drawerCard__content-title p {
+    font-size: 18px;
+  }
+
+  .drawerCard__text h3 {
+    font-size: 22px;
+  }
+
+  .drawerCard__text p {
+    font-size: 18px;
+  }
+
+  .drawerCard__text-states h3 {
+    font-size: 22px;
+  }
+
+  .drawerCard__text-states-ul {
+    height: 20vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .drawerCard {
+    height: 85vh;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  .drawerCard__button {
+    width: 32px;
+  }
+
+  .drawerCard__content {
+    padding: 0 40px;
+    margin: -20px 0 0 0;
+    gap: 10px;
+  }
+
+  .drawerCard__content-emoji p {
+    font-size: 100px;
+    margin: -30px 0 0 0;
+  }
+
+  .drawerCard__content-title h3 {
+    font-size: 18px;
+  }
+
+  .drawerCard__content-title p {
+    font-size: 16px;
+  }
+
+  .drawerCard__text h3 {
+    font-size: 20px;
+  }
+
+  .drawerCard__text p {
+    font-size: 16px;
+  }
+
+  .drawerCard__text-states h3 {
+    font-size: 20px;
+  }
+
+  .drawerCard__text-states-ul {
+    height: 1vh;
+  }
 }

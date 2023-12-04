@@ -76,3 +76,25 @@
 .cardCountry__content-text--active p {
   color: #fff;
 }
+
+@media (max-width: 480px) {
+  .cardCountry {
+    height: 200px;
+    width: 300px;
+  }
+
+  .cardCountry__content {
+    height: 70px;
+    margin: -10px 0 0 0;
+  }
+
+  .cardCountry__content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cardCountry__content-text h3 {
+    font-size: 17px;
+  }
+}

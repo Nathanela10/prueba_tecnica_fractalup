@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './pages/HomeProject.vue';
+import Home from './pages/HomeProject/HomeProject.vue';
 import ViewOne from './pages/ViewOne.vue';
 import ViewTwo from './pages/ViewTwo.vue';
 
